@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SCRA-Chad: Strengthening Climate Resilient Agriculture for Sustainable Rural Development in Chad">
-  <title>SCRA-Chad | Climate Resilient Agriculture</title>
+  <meta name="description" content="SCRA-Tchad : Renforcer l'agriculture résiliente au climat pour un développement rural durable au Tchad">
+  <meta name="keywords" content="résilience climatique, agriculture, Tchad, développement durable, petits agriculteurs">
+  <meta name="robots" content="index, follow">
+  <title>SCRA-Tchad | Agriculture Résiliente au Climat</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
-  <!-- Favicon and accessibility meta tags -->
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="theme-color" content="#1a4731">
-  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="SCRA-Tchad : Renforcer l'Agriculture Résiliente au Climat">
+  <meta property="og:description" content="Autonomiser les agriculteurs tchadiens avec des pratiques résilientes au climat pour un développement rural durable.">
+  <meta property="og:image" content="farmer-field.jpg">
+  <meta property="og:url" content="https://scra-chad.org">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
+<body class="font-inter text-gray-800 bg-gray-50 antialiased">
   <!-- Navigation -->
-  <nav class="bg-green-800 text-white fixed w-full top-0 z-50 shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold">SCRA-Chad</a>
-      <button id="menu-toggle" class="md:hidden focus:outline-none" aria-label="Toggle navigation">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <nav class="bg-green-900 text-white fixed w-full top-0 z-50 shadow-lg transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold tracking-tight">SCRA-Tchad</a>
+      <button id="menu-toggle" class="md:hidden focus:outline-none" aria-label="Basculer la navigation">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <ul id="nav-menu" class="hidden md:flex space-x-6">
-        <li><a href="#home" class="hover:text-green-300 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-green-300 transition">About</a></li>
-        <li><a href="#initiatives" class="hover:text-green-300 transition">Key Initiatives</a></li>
-        <li><a href="#stories" class="hover:text-green-300 transition">Impact Stories</a></li>
-        <li><a href="#resources" class="hover:text-green-300 transition">Resources</a></li>
-        <li><a href="#partners" class="hover:text-green-300 transition">Partners</a></li>
-        <li><a href="#news" class="hover:text-green-300 transition">News & Updates</a></li>
-        <li><a href="#contact" class="hover:text-green-300 transition">Contact</a></li>
+      <ul id="nav-menu" class="hidden md:flex space-x-8 text-lg">
+        <li><a href="#accueil" class="hover:text-green-300 transition duration-200">Accueil</a></li>
+        <li><a href="#a-propos" class="hover:text-green-300 transition duration-200">À Propos</a></li>
+        <li><a href="#initiatives" class="hover:text-green-300 transition duration-200">Initiatives</a></li>
+        <li><a href="#histoires" class="hover:text-green-300 transition duration-200">Histoires d'Impact</a></li>
+        <li><a href="#ressources" class="hover:text-green-300 transition duration-200">Ressources</a></li>
+        <li><a href="#partenaires" class="hover:text-green-300 transition duration-200">Partenaires</a></li>
+        <li><a href="#actualites" class="hover:text-green-300 transition duration-200">Actualités</a></li>
+        <li><a href="#contact" class="hover:text-green-300 transition duration-200">Contact</a></li>
       </ul>
       <div class="hidden md:block">
-        <select id="language-toggle" class="bg-green-700 text-white border-none p-2 rounded" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="ar">Arabic</option>
+        <select id="language-toggle" class="bg-green-700 text-white border-none p-2 rounded-lg focus:ring-2 focus:ring-green-300" aria-label="Sélectionner la langue">
+          <option value="fr">Français</option>
+          <option value="en">Anglais</option>
+          <option value="ar">Arabe</option>
           <option value="sara">Sara</option>
         </select>
       </div>
@@ -45,21 +50,21 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden bg-green-800 text-white fixed w-full top-16 z-40">
-    <ul class="flex flex-col items-center space-y-4 py-4">
-      <li><a href="#home" class="hover:text-green-300 transition">Home</a></li>
-      <li><a href="#about" class="hover:text-green-300 transition">About</a></li>
-      <li><a href="#initiatives" class="hover:text-green-300 transition">Key Initiatives</a></li>
-      <li><a href="#stories" class="hover:text-green-300 transition">Impact Stories</a></li>
-      <li><a href="#resources" class="hover:text-green-300 transition">Resources</a></li>
-      <li><a href="#partners" class="hover:text-green-300 transition">Partners</a></li>
-      <li><a href="#news" class="hover:text-green-300 transition">News & Updates</a></li>
-      <li><a href="#contact" class="hover:text-green-300 transition">Contact</a></li>
+  <div id="mobile-menu" class="hidden bg-green-900 text-white fixed w-full top-16 z-40 shadow-lg">
+    <ul class="flex flex-col items-center space-y-6 py-6 text-lg">
+      <li><a href="#accueil" class="hover:text-green-300 transition duration-200">Accueil</a></li>
+      <li><a href="#a-propos" class="hover:text-green-300 transition duration-200">À Propos</a></li>
+      <li><a href="#initiatives" class="hover:text-green-300 transition duration-200">Initiatives</a></li>
+      <li><a href="#histoires" class="hover:text-green-300 transition duration-200">Histoires d'Impact</a></li>
+      <li><a href="#ressources" class="hover:text-green-300 transition duration-200">Ressources</a></li>
+      <li><a href="#partenaires" class="hover:text-green-300 transition duration-200">Partenaires</a></li>
+      <li><a href="#actualites" class="hover:text-green-300 transition duration-200">Actualités</a></li>
+      <li><a href="#contact" class="hover:text-green-300 transition duration-200">Contact</a></li>
       <li>
-        <select id="mobile-language-toggle" class="bg-green-700 text-white border-none p-2 rounded" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="ar">Arabic</option>
+        <select id="mobile-language-toggle" class="bg-green-700 text-white border-none p-2 rounded-lg" aria-label="Sélectionner la langue">
+          <option value="fr">Français</option>
+          <option value="en">Anglais</option>
+          <option value="ar">Arabe</option>
           <option value="sara">Sara</option>
         </select>
       </li>
@@ -67,116 +72,325 @@
   </div>
 
   <!-- Hero Section -->
-  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('farmer-field.jpg');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="container mx-auto px-4 text-center text-white relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Strengthening Climate Resilient Agriculture in Chad</h1>
-      <p class="text-lg md:text-2xl mb-6">Empowering communities for sustainable rural development</p>
-      <a href="#about" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition">Learn More</a>
+  <section id="accueil" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('farmer-field.jpg');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"></div>
+    <div class="container mx-auto px-6 text-center text-white relative z-10 animate-fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Renforcer l'Agriculture Résiliente au Climat au Tchad</h1>
+      <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto">Autonomiser plus de 20 000 petits agriculteurs avec des pratiques durables pour prospérer dans un climat changeant</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#a-propos" class="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition duration-300 text-lg">En savoir plus</a>
+        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-green-900 transition duration-300 text-lg">S'impliquer</a>
+      </div>
     </div>
   </section>
 
   <!-- Quick Stats -->
-  <section class="bg-white py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Our Impact</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <p id="farmer-counter" class="text-4xl font-bold text-green-600">0</p>
-          <p>Farmers Supported</p>
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-900">Notre Impact</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="animate-slide-up">
+          <p id="farmer-counter" class="text-5xl font-bold text-green-600">0</p>
+          <p class="mt-2 text-lg">Agriculteurs Soutenus</p>
         </div>
-        <div>
-          <p id="land-counter" class="text-4xl font-bold text-green-600">0%</p>
-          <p>Land Degradation Reduction</p>
+        <div class="animate-slide-up" style="animation-delay: 0.2s;">
+          <p id="land-counter" class="text-5xl font-bold text-green-600">0%</p>
+          <p class="mt-2 text-lg">Réduction de la Dégradation des Terres</p>
         </div>
-        <div>
-          <p id="district-counter" class="text-4xl font-bold text-green-600">0</p>
-          <p>Districts Impacted</p>
+        <div class="animate-slide-up" style="animation-delay: 0.4s;">
+          <p id="district-counter" class="text-5xl font-bold text-green-600">0</p>
+          <p class="mt-2 text-lg">Districts Impactés</p>
+        </div>
+        <div class="animate-slide-up" style="animation-delay: 0.6s;">
+          <p id="cooperative-counter" class="text-5xl font-bold text-green-600">0</p>
+          <p class="mt-2 text-lg">Coopératives Établies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="a-propos" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">À Propos de SCRA-Tchad</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <div class="animate-fade-in">
+            <h3 class="text-2xl font-semibold mb-4 text-green-800">Mission & Vision</h3>
+            <p class="text-lg leading-relaxed">SCRA-Tchad s'engage à renforcer la résilience des petits agriculteurs dans les zones vulnérables au climat du Tchad par une agriculture intelligente face au climat, une gestion durable des terres et un développement rural inclusif. Notre vision est un Tchad sécurisé sur le plan alimentaire où les communautés prospèrent malgré les défis climatiques.</p>
+          </div>
+          <div class="animate-fade-in" style="animation-delay: 0.2s;">
+            <h3 class="text-2xl font-semibold mb-4 text-green-800">Défis Climatiques</h3>
+            <p class="text-lg leading-relaxed">Situé dans le Sahel, le Tchad est confronté à des sécheresses fréquentes, des pluies irrégulières et à la désertification. Plus de 80 % de la population dépend de l'agriculture pluviale, ce qui les rend vulnérables à l'insécurité alimentaire et à la pauvreté.</p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="animate-fade-in" style="animation-delay: 0.4s;">
+            <h3 class="text-2xl font-semibold mb-4 text-green-800">Notre Approche</h3>
+            <p class="text-lg leading-relaxed">Nous déployons des cultures résilientes à la sécheresse, des irrigations solaires et une régénération naturelle gérée par les agriculteurs pour restaurer les écosystèmes. En autonomisant les femmes et les jeunes et en fournissant un accès aux données météorologiques et aux marchés, nous favorisons des moyens de subsistance durables.</p>
+          </div>
+          <div class="animate-fade-in" style="animation-delay: 0.6s;">
+            <h3 class="text-2xl font-semibold mb-4 text-green-800">Calendrier</h3>
+            <p class="text-lg leading-relaxed">2025–2029 : Une initiative de 4 ans pour transformer l'agriculture dans les régions de Kanem, Bahr el Gazal, Batha, Mandoul, Moyen-Chari, Logone et Lac.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Key Initiatives -->
-  <section id="initiatives" class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Key Initiatives</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="climate-smart.jpg" alt="Climate-Smart Agriculture" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Climate-Smart Agriculture</h3>
-          <p>Promoting drought-resilient crops and agroforestry techniques.</p>
+  <section id="initiatives" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Initiatives Clés</h2>
+      <div class="space-y-12">
+        <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Agriculture Intelligente face au Climat</h3>
+          <p class="text-lg leading-relaxed">Déploiement de cultures résistantes à la sécheresse comme le sorgho, le mil et le niébé, et formation des agriculteurs à l'agroforesterie et à la gestion écologique des parasites dans les écoles agricoles de Guéra, Hadjer-Lamis et Salamat.</p>
+          <img src="climate-smart.jpg" alt="Agriculteur plantant des cultures résistantes à la sécheresse" class="w-full h-64 object-cover rounded-lg mt-6">
+          <blockquote class="mt-6 italic text-gray-600">"Ces nouvelles cultures résistent mieux aux saisons sèches." — Moussa, Guéra</blockquote>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="water-management.jpg" alt="Water Management" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Water & Irrigation</h3>
-          <p>Implementing solar-powered boreholes and drip irrigation.</p>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Systèmes d'Eau et d'Irrigation</h3>
+          <p class="text-lg leading-relaxed">Installation de forages solaires, d'irrigation goutte-à-goutte et promotion des fosses zai et de la collecte d'eau de pluie pour améliorer l'accès à l'eau dans les zones sujettes à la sécheresse.</p>
+          <img src="water-management.jpg" alt="Forage solaire en utilisation" class="w-full h-64 object-cover rounded-lg mt-6">
+          <blockquote class="mt-6 italic text-gray-600">"Nous avons maintenant de l'eau même en saison sèche." — Fatimé, Kanem</blockquote>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="reforestation.jpg" alt="Reforestation" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Land Restoration</h3>
-          <p>Scaling farmer-managed natural regeneration and reforestation.</p>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.4s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Restauration des Terres et Reforestation</h3>
+          <p class="text-lg leading-relaxed">Mobilisation des jeunes et des femmes pour la reforestation et mise à l'échelle de la régénération naturelle gérée par les agriculteurs pour restaurer la fertilité des sols et la biodiversité.</p>
+          <img src="reforestation.jpg" alt="Jeunes plantant des arbres" class="w-full h-64 object-cover rounded-lg mt-6">
+          <blockquote class="mt-6 italic text-gray-600">"Nos terres sont plus vertes maintenant." — Aïcha, Batha</blockquote>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-          <img src="empowerment.jpg" alt="Empowerment" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Women & Youth Empowerment</h3>
-          <p>Building cooperatives and training in climate-smart value chains.</p>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.6s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Informations Météorologiques et Outils Numériques</h3>
+          <p class="text-lg leading-relaxed">Fourniture de prévisions météorologiques et de prix du marché par SMS, radio et applications en français, sara et arabe tchadien pour réduire les pertes après récolte.</p>
+          <img src="digital-tools.jpg" alt="Agriculteur consultant une application météo" class="w-full h-64 object-cover rounded-lg mt-6">
+          <blockquote class="mt-6 italic text-gray-600">"Je planifie mes plantations avec les mises à jour météo." — Idriss, Salamat</blockquote>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.8s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Autonomisation des Femmes et des Jeunes</h3>
+          <p class="text-lg leading-relaxed">Établissement de coopératives dirigées par des femmes et formation des jeunes au compostage, à l'élevage de volailles et au séchage solaire pour créer des moyens de subsistance durables.</p>
+          <img src="empowerment.jpg" alt="Femmes en réunion de coopérative" class="w-full h-64 object-cover rounded-lg mt-6">
+          <blockquote class="mt-6 italic text-gray-600">"Notre coopérative nous donne une voix." — Mariam, Mandoul</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stories -->
+  <section id="histoires" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Histoires d'Impact</h2>
+      <div class="flex justify-center mb-8">
+        <select id="story-filter" class="bg-green-600 text-white p-3 rounded-lg text-lg focus:ring-2 focus:ring-green-300" aria-label="Filtrer les histoires">
+          <option value="all">Toutes les Histoires</option>
+          <option value="kanem">Kanem</option>
+          <option value="batha">Batha</option>
+          <option value="mandoul">Mandoul</option>
+          <option value="women">Femmes</option>
+          <option value="youth">Jeunes</option>
+        </select>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in">
+          <img src="story1.jpg" alt="La ferme d'Amina à Batha" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800">Le Parcours d'Amina à Batha</h3>
+          <p class="text-lg leading-relaxed">Depuis son adhésion à SCRA-Tchad, Amina a augmenté son rendement de mil de 50 % grâce à des semences résistantes à la sécheresse et des fosses zai.</p>
+          <p class="mt-4 italic text-gray-600">"Ce projet a changé l'avenir de notre village." — Amina</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.2s;">
+          <img src="story2.jpg" alt="Coopérative de jeunes à Mandoul" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800">Coopérative de Jeunes à Mandoul</h3>
+          <p class="text-lg leading-relaxed">Les jeunes agriculteurs formés au séchage solaire vendent maintenant des cultures préservées à de meilleurs prix, augmentant leurs revenus.</p>
+          <p class="mt-4 italic text-gray-600">"Nous construisons notre avenir." — Youssouf</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.4s;">
+          <img src="story3.jpg" alt="Coopérative de femmes à Kanem" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800">Coopérative de Femmes à Kanem</h3>
+          <p class="text-lg leading-relaxed">Les initiatives de conservation des semences dirigées par les femmes garantissent un accès aux cultures résilientes toute l'année.</p>
+          <p class="mt-4 italic text-gray-600">"Nos semences, notre force." — Fatoumata</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="ressources" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Ressources</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="animate-fade-in">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Téléchargements</h3>
+          <ul class="space-y-4 text-lg">
+            <li><a href="report.pdf" class="text-green-600 hover:underline flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>Rapport Annuel SCRA-Tchad</a></li>
+            <li><a href="training-manual.pdf" class="text-green-600 hover:underline flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>Manuel de Formation des Agriculteurs</a></li>
+            <li><a href="climate-guide.pdf" class="text-green-600 hover:underline flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>Guide de l'Agriculture Intelligente face au Climat</a></li>
+          </ul>
+        </div>
+        <div class="animate-fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Tableaux de Bord Interactifs</h3>
+          <p class="text-lg leading-relaxed mb-4">Explorez l'impact de notre projet à travers des visualisations de données interactives.</p>
+          <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+            <p>Placeholder Tableau de Bord Power BI</p>
+          </div>
+          <p class="mt-4 text-lg">Accédez à nos applications mobiles :</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-green-600 hover:underline">Application Météo</a>
+            <a href="#" class="text-green-600 hover:underline">Application Prix du Marché</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partenaires" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Nos Partenaires</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <a href="https://www.fao.org" target="_blank" class="text-center animate-fade-in">
+          <img src="fao-logo.png" alt="Logo FAO" class="w-32 mx-auto hover:scale-105 transition duration-300">
+          <p class="mt-2 text-lg">FAO</p>
+        </a>
+        <a href="https://www.ifad.org" target="_blank" class="text-center animate-fade-in" style="animation-delay: 0.2s;">
+          <img src="ifad-logo.png" alt="Logo IFAD" class="w-32 mx-auto hover:scale-105 transition duration-300">
+          <p class="mt-2 text-lg">IFAD</p>
+        </a>
+        <a href="https://www.thegef.org" target="_blank" class="text-center animate-fade-in" style="animation-delay: 0.4s;">
+          <img src="gef-logo.png" alt="Logo GEF" class="w-32 mx-auto hover:scale-105 transition duration-300">
+          <p class="mt-2 text-lg">GEF</p>
+        </a>
+        <a href="https://www.greenclimate.fund" target="_blank" class="text-center animate-fade-in" style="animation-delay: 0.6s;">
+          <img src="gcf-logo.png" alt="Logo Fonds Vert pour le Climat" class="w-32 mx-auto hover:scale-105 transition duration-300">
+          <p class="mt-2 text-lg">Fonds Vert pour le Climat</p>
+        </a>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-lg leading-relaxed">En collaboration avec des ONG locales comme CELIAF et APRODEB, et des leaders communautaires pour un impact durable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Updates -->
+  <section id="actualites" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Actualités</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in">
+          <h3 class="text-xl font-semibold mb-2 text-green-800">Forages Solaires Installés à Kanem</h3>
+          <p class="text-sm text-gray-600">Juillet 2025</p>
+          <p class="text-lg leading-relaxed">De nouveaux forages solaires fournissent un accès fiable à l'eau pour 500 agriculteurs.</p>
+          <a href="#" class="text-green-600 hover:underline mt-4 inline-block">Lire la Suite</a>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate-fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-xl font-semibold mb-2 text-green-800">Lancement d'une Coopérative de Femmes</h3>
+          <p class="text-sm text-gray-600">Juin 2025</p>
+          <p class="text-lg leading-relaxed">Une nouvelle coopérative à Mandoul autonomise les femmes dans la conservation des semences et la commercialisation.</p>
+          <a href="#" class="text-green-600 hover:underline mt-4 inline-block">Lire la Suite</a>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="media-kit.pdf" class="text-green-600 hover:underline text-lg flex justify-center items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>Télécharger le Kit Média</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-900">Nous Contacter</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="animate-fade-in">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Prendre Contact</h3>
+          <div role="form" class="space-y-6">
+            <input type="text" placeholder="Nom" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-300" aria-label="Nom">
+            <input type="email" placeholder="Email" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-300" aria-label="Email">
+            <select class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-300" aria-label="Sujet">
+              <option value="">Sélectionner un Sujet</option>
+              <option value="general">Demande Générale</option>
+              <option value="farmer-support">Soutien aux Agriculteurs</option>
+              <option value="partnership">Partenariat</option>
+            </select>
+            <textarea placeholder="Message" class="w-full p-3 rounded-lg border border-gray-300 h-36 focus:ring-2 focus:ring-green-300" aria-label="Message"></textarea>
+            <button class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 text-lg">Envoyer le Message</button>
+          </div>
+          <p class="mt-6 text-lg">Ligne d'Assistance pour les Agriculteurs : <a href="https://wa.me/+23512345678" class="text-green-600 hover:underline">WhatsApp</a></p>
+        </div>
+        <div class="animate-fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-semibold mb-4 text-green-800">Notre Bureau</h3>
+          <p class="text-lg">Siège de SCRA-Tchad<br>N'Djaména, Tchad</p>
+          <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center mt-6">
+            <p>Placeholder Google Map</p>
+          </div>
+          <p class="mt-6 text-lg">Contacts Locaux :</p>
+          <ul class="space-y-2 text-lg">
+            <li>Kanem : +235 9876 5432</li>
+            <li>Batha : +235 8765 4321</li>
+            <li>Mandoul : +235 7654 3210</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Interactive Map -->
-  <section class="bg-white py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Project Zones</h2>
-      <div id="map" class="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-        <p>Interactive Map of Chad (Placeholder)</p>
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-900">Zones du Projet</h2>
+      <div id="map" class="h-[500px] bg-gray-200 rounded-lg flex items-center justify-center shadow-lg">
+        <p class="text-lg">Carte Interactive du Tchad : Kanem, Bahr el Gazal, Batha, Mandoul, Moyen-Chari, Logone, Lac (Placeholder)</p>
       </div>
     </div>
   </section>
 
   <!-- Impact Quote -->
-  <section class="bg-green-800 text-white py-12">
-    <div class="container mx-auto px-4 text-center">
-      <blockquote class="text-xl italic mb-4">
-        “Since joining the program, I’ve harvested more with less water. This project changed our village’s future.”
-      </blockquote>
-      <p class="font-semibold">— Amina, Farmer, Batha Region</p>
+  <section class="bg-green-900 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <blockquote class="text-2xl italic mb-6 max-w-3xl mx-auto">"Depuis que j'ai rejoint le programme, j’ai récolté plus avec moins d'eau. Ce projet a changé l'avenir de notre village."</blockquote>
+      <p class="text-lg font-semibold">— Amina, Agricultrice, Région de Batha</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-green-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <footer class="bg-green-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <h3 class="text-xl font-bold mb-4">SCRA-Chad</h3>
-          <p>Strengthening climate-resilient agriculture for sustainable rural development.</p>
+          <h3 class="text-2xl font-bold mb-4">SCRA-Tchad</h3>
+          <p class="text-lg leading-relaxed">Renforcer l'agriculture résiliente au climat pour un développement rural durable dans les zones sahéliennes et soudaniennes du Tchad.</p>
         </div>
         <div>
-          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#about" class="hover:text-green-300">About</a></li>
-            <li><a href="#initiatives" class="hover:text-green-300">Initiatives</a></li>
-            <li><a href="#contact" class="hover:text-green-300">Contact</a></li>
+          <h3 class="text-2xl font-bold mb-4">Liens Rapides</h3>
+          <ul class="space-y-3 text-lg">
+            <li><a href="#a-propos" class="hover:text-green-300 transition duration-200">À Propos</a></li>
+            <li><a href="#initiatives" class="hover:text-green-300 transition duration-200">Initiatives</a></li>
+            <li><a href="#histoires" class="hover:text-green-300 transition duration-200">Histoires d'Impact</a></li>
+            <li><a href="#contact" class="hover:text-green-300 transition duration-200">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-bold mb-4">Connect</h3>
-          <div class="flex space-x-4">
-            <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
-            <a href="#" aria-label="WhatsApp"><img src="whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6"></a>
-            <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" class="w-6 h-6"></a>
+          <h3 class="text-2xl font-bold mb-4">Ressources</h3>
+          <ul class="space-y-3 text-lg">
+            <li><a href="#ressources" class="hover:text-green-300 transition duration-200">Téléchargements</a></li>
+            <li><a href="#ressources" class="hover:text-green-300 transition duration-200">Application Météo</a></li>
+            <li><a href="#ressources" class="hover:text-green-300 transition duration-200">Prix du Marché</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Connectez-vous</h3>
+          <div class="flex space-x-6 mb-6">
+            <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" class="w-8 h-8 hover:scale-110 transition duration-200"></a>
+            <a href="https://wa.me/+23512345678" aria-label="WhatsApp"><img src="whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8 hover:scale-110 transition duration-200"></a>
+            <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" class="w-8 h-8 hover:scale-110 transition duration-200"></a>
           </div>
-          <div class="mt-4">
-            <input type="email" placeholder="Subscribe to Newsletter" class="w-full p-2 rounded text-gray-800" aria-label="Newsletter subscription">
-            <button class="bg-green-600 text-white px-4 py-2 mt-2 rounded hover:bg-green-700">Subscribe</button>
+          <div>
+            <input type="email" placeholder="S'abonner à la Newsletter" class="w-full p-3 rounded-lg text-gray-800 focus:ring-2 focus:ring-green-300" aria-label="Abonnement à la newsletter">
+            <button class="bg-green-600 text-white px-6 py-3 mt-4 rounded-lg hover:bg-green-700 transition duration-300 w-full">S'abonner</button>
           </div>
         </div>
       </div>
-      <div class="mt-8 text-center">
-        <p>&copy; 2025 SCRA-Chad. All rights reserved.</p>
+      <div class="mt-12 text-center">
+        <p class="text-lg">&copy; 2025 SCRA-Tchad. Tous droits réservés. Soutenu par la FAO, l'IFAD, le GEF, le Fonds Vert pour le Climat et des partenaires locaux.</p>
       </div>
     </div>
   </footer>
